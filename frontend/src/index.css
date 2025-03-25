@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.description {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-20px);
+  margin: 0 40px;
+}
+
+.map {
+  border: solid 0.5px lightgray;
+  flex: 0 0 auto;
+  width: 100vh;
+  height: 100%;
+}
+
+.map-inner {
+  position: relative;
+}
+
+.map-inner svg {
+  height: 100%;
+  width: 100%;
+}
+
+.map-refresh.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
